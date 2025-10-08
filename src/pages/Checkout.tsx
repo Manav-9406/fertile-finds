@@ -212,17 +212,20 @@ const Checkout = () => {
                     <RadioGroup
                       value={formData.paymentMethod}
                       onValueChange={(value) => setFormData({ ...formData, paymentMethod: value })}
+                      className="space-y-3"
                     >
-                      <div className="flex items-center space-x-2 p-4 border rounded-lg cursor-pointer hover:bg-muted">
+                      <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-colors ${formData.paymentMethod === 'cod' ? 'border-primary bg-primary/5' : 'border-border hover:bg-muted'}`}>
                         <RadioGroupItem value="cod" id="cod" />
-                        <Label htmlFor="cod" className="cursor-pointer flex-1">
-                          Cash on Delivery
+                        <Label htmlFor="cod" className="cursor-pointer flex-1 font-medium">
+                          💵 Cash on Delivery
+                          <p className="text-sm text-muted-foreground font-normal mt-1">Pay when you receive your order</p>
                         </Label>
                       </div>
-                      <div className="flex items-center space-x-2 p-4 border rounded-lg cursor-pointer hover:bg-muted">
+                      <div className={`flex items-center space-x-3 p-4 border-2 rounded-lg cursor-pointer transition-colors ${formData.paymentMethod === 'upi' ? 'border-primary bg-primary/5' : 'border-border hover:bg-muted'}`}>
                         <RadioGroupItem value="upi" id="upi" />
-                        <Label htmlFor="upi" className="cursor-pointer flex-1">
-                          UPI / Online Payment
+                        <Label htmlFor="upi" className="cursor-pointer flex-1 font-medium">
+                          📱 UPI / Online Payment
+                          <p className="text-sm text-muted-foreground font-normal mt-1">Pay using UPI, cards, or net banking</p>
                         </Label>
                       </div>
                     </RadioGroup>

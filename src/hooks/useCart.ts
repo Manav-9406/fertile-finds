@@ -45,10 +45,13 @@ export const useCart = () => {
       const existingItem = currentItems.find((item) => item.id === product.id);
 
       if (existingItem) {
-        toast({
-          title: "Cart Updated",
-          description: `${product.name} quantity updated`,
-        });
+        // Schedule toast to avoid state update during render
+        setTimeout(() => {
+          toast({
+            title: "Cart Updated",
+            description: `${product.name} quantity updated`,
+          });
+        }, 0);
         return currentItems.map((item) =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + quantity }
@@ -56,10 +59,13 @@ export const useCart = () => {
         );
       }
 
-      toast({
-        title: "Added to Cart",
-        description: `${product.name} has been added to your cart`,
-      });
+      // Schedule toast to avoid state update during render
+      setTimeout(() => {
+        toast({
+          title: "Added to Cart",
+          description: `${product.name} has been added to your cart`,
+        });
+      }, 0);
       return [...currentItems, { ...product, quantity }];
     });
   };
@@ -68,10 +74,12 @@ export const useCart = () => {
     setItems((currentItems) => {
       const item = currentItems.find((i) => i.id === productId);
       if (item) {
-        toast({
-          title: "Item Removed",
-          description: `${item.name} has been removed from your cart`,
-        });
+        setTimeout(() => {
+          toast({
+            title: "Item Removed",
+            description: `${item.name} has been removed from your cart`,
+          });
+        }, 0);
       }
       return currentItems.filter((item) => item.id !== productId);
     });
@@ -92,10 +100,12 @@ export const useCart = () => {
 
   const clearCart = () => {
     setItems([]);
-    toast({
-      title: "Cart Cleared",
-      description: "All items have been removed from your cart",
-    });
+    setTimeout(() => {
+      toast({
+        title: "Cart Cleared",
+        description: "All items have been removed from your cart",
+      });
+    }, 0);
   };
 
   const getCartTotal = () => {
