@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroMart - Agriculture E-Commerce | Pesticides, Fertilizers, Seeds & Tools</title>
+    <meta name="description" content="Buy quality pesticides, fertilizers, seeds, and farming tools at AgroMart. Best prices, fast delivery, and 100% genuine agriculture products for farmers.">
+    <meta name="keywords" content="agriculture, pesticides, fertilizers, seeds, farming tools, organic farming, crop protection">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">🌾 AgroMart</a>
+                </div>
+                <nav class="nav" id="nav">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="products.html" class="nav-link">Products</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="cart.html" class="nav-link cart-link">
+                        🛒 Cart <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </nav>
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Empowering Farmers with Quality Products</h1>
+            <p class="hero-subtitle">Your trusted partner for pesticides, fertilizers, seeds, and farming tools</p>
+            <a href="products.html" class="btn btn-primary btn-lg">Shop Now →</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Product Categories</h2>
+                <p class="section-subtitle">Everything you need for successful farming</p>
+            </div>
+            <div class="categories-grid">
+                <a href="products.html?category=Pesticides" class="category-card">
+                    <div class="category-icon pesticides">💧</div>
+                    <h3 class="category-title">Pesticides</h3>
+                    <p class="category-desc">Protect your crops from pests</p>
+                </a>
+                <a href="products.html?category=Fertilizers" class="category-card">
+                    <div class="category-icon fertilizers">🍃</div>
+                    <h3 class="category-title">Fertilizers</h3>
+                    <p class="category-desc">Nourish your soil naturally</p>
+                </a>
+                <a href="products.html?category=Seeds" class="category-card">
+                    <div class="category-icon seeds">🌱</div>
+                    <h3 class="category-title">Seeds</h3>
+                    <p class="category-desc">High-yield quality seeds</p>
+                </a>
+                <a href="products.html?category=Tools" class="category-card">
+                    <div class="category-icon tools">🔧</div>
+                    <h3 class="category-title">Tools</h3>
+                    <p class="category-desc">Essential farming equipment</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-subtitle">Best-selling products trusted by farmers</p>
+            </div>
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products will be loaded here -->
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="products.html" class="btn btn-outline">View All Products →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section section-primary">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose AgroMart?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <h3 class="feature-title">Quality Assured</h3>
+                    <p class="feature-desc">100% genuine products from trusted manufacturers</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🚚</div>
+                    <h3 class="feature-title">Fast Delivery</h3>
+                    <p class="feature-desc">Quick and reliable delivery to your doorstep</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Best Prices</h3>
+                    <p class="feature-desc">Competitive pricing with great discounts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">AgroMart</h3>
+                    <p class="footer-text">Your trusted partner in agriculture, providing quality products for better farming.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>📧 info@agromart.com</li>
+                        <li>📞 +91 98765 43210</li>
+                        <li>📍 Mumbai, India</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroMart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        // Load featured products
+        fetch('data.json')
+            .then(res => res.json())
+            .then(products => {
+                const featured = products.slice(0, 4);
+                const container = document.getElementById('featuredProducts');
+                container.innerHTML = featured.map(product => createProductCard(product)).join('');
+            })
+            .catch(err => console.error('Error loading products:', err));
+    </script>
+</body>
+</html>
